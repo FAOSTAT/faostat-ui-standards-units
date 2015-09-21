@@ -1,11 +1,9 @@
 <script type='text/x-handlebars-template' id='faostat_ui_standards_units_structure'>
     <div class='row'>
         <div class='col-lg-12'>
-            <h1>FAOSTAT Units</h1>
+            <h1>{{faostat_units_label}}</h1>
             <div id='units_content'>
-                <h2 class='text-center'>
-                    Please select a methodology by using the tree on the left.
-                </h2>
+                &nbsp;
             </div>
         </div>
     </div>
@@ -17,10 +15,10 @@
         <thead>
             <tr>
                 <th>
-                    Unit
+                    {{unit_label}}
                 </th>
                 <th>
-                    Description
+                    {{description_label}}
                 </th>
             </tr>
         </thead>

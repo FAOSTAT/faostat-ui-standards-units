@@ -52,7 +52,9 @@ define(['jquery',
         /* Load main structure. */
         source = $(templates).filter('#faostat_ui_standards_units_structure').html();
         template = Handlebars.compile(source);
-        dynamic_data = { };
+        dynamic_data = {
+            faostat_units_label: translate.faostat_units_label
+        };
         html = template(dynamic_data);
         $('#' + this.CONFIG.placeholder_id).html(html);
 
@@ -72,7 +74,9 @@ define(['jquery',
         source = $(templates).filter('#faostat_ui_standards_units_table').html();
         template = Handlebars.compile(source);
         dynamic_data = {
-            rows: json.data
+            rows: json.data,
+            unit_label: translate.unit_label,
+            description_label: translate.description_label
         };
         html = template(dynamic_data);
         $('#units_content').html(html);
